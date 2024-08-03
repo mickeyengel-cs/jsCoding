@@ -1,4 +1,4 @@
-# Project Title
+# JavaScript Examples
 
 JavaScript Demo Code
 
