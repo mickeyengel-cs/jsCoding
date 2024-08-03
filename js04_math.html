@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JS: Math Methods</title>
+    </head>
+    <body>
+        <div id='mathResults'></div>
+        <script>
+            let a=5, b=9;
+            let c=2.5, d=7.32;
+            let ouptut=document.getElementById('mathResults');
+
+            //All of the Math methods are called from the Math class
+            //the methods names are fairly self-explanatory, but here are some code examples
+
+            //ROUNDING
+            output.innerHTML += Math.round(c)+"<br/>";          //3
+            output.innerHTML += Math.floor(c)+"<br/>";          //2
+            output.innerHTML += Math.ceil(c)+"<br/>";           //3
+
+            //POWERS
+            output.innerHTML += Math.pow(a, 2)+"<br/>";         //25
+            output.innerHTML += Math.sqrt(b)+"<br/>";           //3
+
+            //EXTREMES
+            output.innerHTML += Math.max(a, b)+"<br/>";         //9
+            output.innerHTML += Math.min(a, b, c, d)+"<br/>";   //2.5
+
+            //MISC
+            output.innerHTML += Math.abs(-2.345)+"<br/>";       //2.345
+            output.innerHTML += Math.PI+"<br/>";                //3.1415...
+            //Note: Math.PI is a property, not a method, so there are not parenthesis
+
+            //CONTROLLING DECIMALS
+            //use the toFixed() method to limit the number of decimals of a result
+            //Warning -> only use toFixed in output, as it converts the number to a string
+            output.innerHTML += Math.PI.toFixed(2);            //3.14
+
+        </script>
+    </body>
+</html>

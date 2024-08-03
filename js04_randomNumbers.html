@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JS: Random Numbers</title>
+    </head>
+    <body>
+        <div id='randomNums'></div>
+        <script>
+            let output=document.getElementById('randomNums');
+
+            //The Math.random() method generates a decimal value from 0(inclusive) to 1(exclusive) -> [0, 1)
+            output.innerHTML += Math.random()+"<br/>";
+            output.innerHTML += Math.random()+"<br/>";
+            output.innerHTML += Math.random()+"<br/>";
+
+            //By multiplying the value by n, we can extend the range from 0(inclusive) to n(exclusive) -> [0, n)
+            output.innerHTML += Math.random()*10+"<br/>";                   //[0, 10)
+            output.innerHTML += Math.random()*20+"<br/>";                   //[0, 20)
+            output.innerHTML += Math.random()*100+"<br/>";                  //[0, 100)
+
+            //By adding a value h, we can slide the range from h(inclusive) to h+n(exclusive) -> [h, n+h)
+            output.innerHTML += Math.random()*100+1+"<br/>";                //[1, 101)
+            output.innerHTML += Math.random()*100+10+"<br/>";               //[10, 110)
+            output.innerHTML += Math.random()*100+100+"<br/>";              //[100, 200)
+
+            //to eliminate the decimals, use parseInt
+            output.innerHTML += parseInt(Math.random()*100+1)+"<br/>";      //[1, 101) - Integers only
+            
+
+            //as a general formula, to get the integers from min to max inclusive -> [min, max]
+            //  parseInt(Math.random()*(max-min+1)+min);            
+
+        </script>
+    </body>
+</html>

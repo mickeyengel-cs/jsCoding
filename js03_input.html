@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JS: Input</title>
+    </head>
+    <body>
+        <!-- 
+            to take input in from an html document, use an input element
+            one input element is needed for each piece of desired input
+            the id for each element must be unique on the page
+            use the placeholder attribute to prompt the user
+
+            <input id='uniqueid' placholder='what are you asking for' />
+        -->
+        <input id='name' placeholder='enter your name' /><br/>
+        <input id='age' placeholder='enter your age' /><br/>
+
+        <!--
+            a button is needed to trigger the execution of the code
+            this holds execution until the user is ready
+            use the onclick attribute to call the processing function
+
+            <button onclick='doSomething()'>Button Text</button>
+        -->
+        <button onclick='calculate()'>Go!</button>
+        <div id='output'></div>
+        <script>
+            //create a function with the same name as the onclick value
+            function calculate(){
+                //access the element using the getElementById method and its value property
+                //store the result in a variable
+                let name = document.getElementById('name').value;
+                let age = document.getElementById('age').value;
+
+                //use the input to create output
+                document.getElementById('output').innerHTML = "Hi, " + name + ".  You are " + age + " years old.";
+
+                //PARSING
+                //All JS input comes in as a string - "Jim", "50", etc
+                //This is not good for addition -> "50"+10 = 5010 by concatenation
+                //to convert an integer string "50" to an integer 50, use parseInt
+                //  let age = parseInt(document.getElementById('age').value);
+
+                //similarly to convert a decimal string "4.13" to a decimal 4.13, use parseFloat
+                //  let age = parseFloat(document.getElementById('age').value);
+                document.getElementById('output').innerHTML += "Next year, you will be "+(parseInt(age)+1);
+
+            }
+
+            
+            /////////////////////////////////////////////////////////////////////////////////////
+            //OPTIONAL CONTENT
+            /////////////////////////////////////////////////////////////////////////////////////
+            //WINDOW INPUT
+            // we use window.prompt() to get the input
+            //prompting a user requires asking for information
+            //the more specific the better
+            /*
+                let bday=window.prompt("What is your birthday? (mm/dd/yyyy)");
+                window.alert(bday);
+            */
+            /*
+                let num1 = parseInt(window.prompt("Enter a number to add"));
+                let num2 = parseFloat(window.prompt("Enter another number to add"));
+                window.alert(num1+num2);
+            */
+            //parseInt is used to turn input from a string into a number
+            //parseFloat is used to input from a string into a float(decimal)
+            //if I use parseInt on a float, it truncates the decimal
+            //if we use parseFloat on an int, it just adds .0
+
+        </script>
+    </body>
+</html>

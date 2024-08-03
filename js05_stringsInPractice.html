@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JS: Strings in Practice</title>
+    </head>
+    <body>
+        <!-- JS and HTML in Practice-->
+        Enter full name (first and last separated by space)<br/>
+        <input id='name' placeholder='first last' /><br/>
+        <button onclick='separateName()'>Run-></button>
+        <div id='result'></div>
+        <script>
+            function separateName(){
+                let name=document.getElementById('name').value;
+                //we want to separate name into firstName and lastName
+                let space=name.indexOf(" ");
+                let firstName=name.substring(0,space);
+                let lastName=name.substring(space+1);
+                document.getElementById('result').innerHTML += "your first name is "+firstName+" and your last name is "+lastName;
+            }
+            
+        </script>
+    </body>
+</html>

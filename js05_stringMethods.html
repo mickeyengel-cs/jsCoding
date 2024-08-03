@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JS: String Methods</title>
+    </head>
+    <body>
+        <div id='output'></div>
+        <script>
+            let output = document.getElementById('output');
+
+            //STRING METHODS
+            //Strings are a collection of single characters
+            //JavaScript provides a set of built in methods to manipulate strings
+            //These methods are called from any String variable
+            //It is important to note that all string methods return an altered value
+            //and DO NOT alter the original string.
+            let str="JavaScript";
+
+            //CASE METHODS
+            /*
+                The case methods, toUpperCase() and toLowerCase(), take no 
+                information in the parenthesis (parameters).  They return a
+                altered version of the string in the appropriate case.  The returned
+                string can be output or stored in a variable for later use.
+            */
+            output.innerHTML += str.toUpperCase()+"<br/>"; //outputs JAVASCRIPT
+            output.innerHTML += str+"<br/>";
+            let lowerStr=str.toLowerCase();
+            output.innerHTML += lowerStr+"<br/>";
+
+            //POSITIONS AND LENGTH
+            /*
+                every string in JavaScript is indexed.  In other words, the 
+                position of each character can be identified by a number.
+                The counting starts at 0.
+                
+                The indexOf method takes a string as a parameter and locates
+                that string in the calling string (str).  It will return the 
+                first index of the first occurence of string in str.  If string
+                is not found, it will return -1.
+            */
+            output.innerHTML += str.indexOf("J")+"<br/>"; //returns 0
+            output.innerHTML += str.indexOf("a")+"<br/>"; //returns 1 
+            output.innerHTML += str.indexOf("Script")+"<br/>"; //returns 4
+            output.innerHTML += str.indexOf("Chase")+"<br/>"; //returns -1
+
+            /*
+                The opposite of indexOf is charAt.  charAt takes a integer index
+                and returns the character at that index.
+            */
+            output.innerHTML += str.charAt(3)+"<br/>";  //returns a
+            output.innerHTML += str.charAt(6)+"<br/>";  //returns r
+
+            /*
+                we can find the length of a string using the length property
+                Remember: functions have parenthesis and properties do no
+            */
+            output.innerHTML += str.length+"<br/>"; //returns 10
+
+            //SUBSTRINGS
+            /*
+                one of the most commonly used string methods is substring
+                this method allows us to return part of a given string
+                the Javascript substring method is written in two ways:
+                    1. A one parameter call with a starting index that
+                    returns all characters from the specified index to 
+                    the end of the string
+                    2. A two parameter call with a starting index and
+                    and ending index.  The starting index will be included, 
+                    but the ending index will not be included.
+            */
+            output.innerHTML += str.substring(4)+"<br/>"; //returns Script
+            output.innerHTML += str.substring(0)+"<br/>"; //returns JavaScript
+            output.innerHTML += str.substring(8)+"<br/>"; //returns pt
+            output.innerHTML += str.substring(0,4)+"<br/>"; //returns Java
+            output.innerHTML += str.substring(5,9)+"<br/>"; //returns crip
+        </script>
+        
+    </body>
+</html>

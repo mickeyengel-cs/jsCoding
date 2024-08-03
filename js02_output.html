@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JS: Output</title>
+    </head>
+    <body>
+        <div id='output'></div>
+        <script>
+
+            //WEB BASED OUTPUT
+            //to output information to an element in a web page, there needs to be a connection between
+            //JS and HTML.  This connection is made using document.getElementById().  This function needs
+            //the target element to have a unique id attribute (in this case, it is output). 
+            document.getElementById('output');
+
+            //This code alone, does not do anything except link to the html element.  To put information into
+            //the element, we need to use the innerHTML property.  There are two ways to do this:
+
+            //using '=' will REPLACE all output in the element
+            document.getElementById('output').innerHTML = "Hello";
+
+            //using '+=' will ADD to the current output in the element
+            document.getElementById('output').innerHTML += ", World!";
+
+            //newlines/linebreaks are created using the HTML linebreak element "<br/>"
+            //it can be written on its own
+            document.getElementById('output').innerHTML += "<br/>";
+            //or it can be written inside other output
+            document.getElementById('output').innerHTML += "This was written in JS. <br/>";
+
+            //FYI: you cannot write more than one blank space in HTML output because
+            //HTML ignores whitespace.  So...
+            document.getElementById('output').innerHTML += "Lots    of    spaces <br/>";
+            //will be the same result as
+            document.getElementById('output').innerHTML += "Lots of spaces<br/>";
+
+
+
+
+            /*////////////////////////////////////////////////////////////////////
+            //////////////////////////////////////////////////////////////////////
+            OTHER OUTPUT METHODS
+                below are some other JS output methods.  To see them in action, uncomment
+                the indented lines of code
+            //////////////////////////////////////////////////////////////////////
+            ////////////////////////////////////////////////////////////////////*/
+
+            //WINDOW BASED OUTPUT
+            //window.alert() outputs information in a pop up window with an "ok" button
+            //the desired output goes in the parenthesis inside double quotes.
+            //Multiple calls to window.alert() will result in multiple popups
+                //window.alert("Welcome to my JavaScript alert!");
+
+            //to format output in a window.alert, or to make multiple lines of output, 
+            //we must use escape sequences. Escape sequences are special cahracters that
+            //follow a \
+                //window.alert("line 1\nline 2"); 
+
+            //other escape sequences
+            //  \t -> tab
+            //  \' -> shows a single quote
+            //  \" -> shows a double quote
+            //  \\ -> shows a backslash
+
+
+            //CONSOLE BASED OUTPUT
+            //console.alert() outputs content on its own line
+            //inside the () goes text in double quotes
+            //console.log can be seen in the console of your browser inspector.  This method
+            //can also be used in node.js implementations
+                //console.log("Hi");
+
+
+            //format output in console.log() we must use escape sequences
+            //escape sequences are special characters that follow a \
+            //window.alert("line 1\nline2");  // \n creates a new line
+            //other escape sequences
+            //  \t -> tab
+            //  \' -> shows a single quote
+            //  \" -> shows a double quote
+            //  \\ -> shows a backslash
+                //console.log("she said \"Go Away!\"");
+
+        </script>
+    </body>
+</head>

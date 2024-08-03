@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JS: Variables</title>
+    </head>
+    <body>
+        <div id='seeme'></div>
+        <script>
+            //VARIABLES
+            //in programming, variables are used to store information
+            //a variable is a named location in memory that holds data
+            //when naming a variable, there are a few rules:
+            //  1. variables names must consist of ONLY letter, numbers and underscores
+            //  2. variables MUST start with a letter (preferably lowercase)
+            //  3. should be mnemonic (describe what they hold)
+            //  4. should be camelCased for readability
+                
+                
+            //DECLARING a variable means giving it a name
+            //in Javascript all variables are declared with keyword let
+            let firstName;
+            let age;
+            let gpa;
+            let isMale;
+            //you may see other code that uses var instead of let
+            //var and let have different scopes for their variables
+
+                
+            //INITIALIZING a variables means we assign a starting value
+            //variables are assigned with =
+            firstName="Sanaan"; //this is a String(several keystrokes) and must be in double quotes
+            age=45; //integer - integers do not use quotes
+            gpa=3.9; //decimal - decimal numbers (floating point) do not use quotes
+            isMale = true;  //boolean  - true or false - no quotes
+                
+            //it is possible to both DECLARE and INITIALZE in the same step
+            let middleInit = 'G';  //this is a character variable, a single keystroke, and uses single quotes
+            
+                
+            //CONCATENATION
+            //add two strings together to make one
+            //it uses the + operater
+            let str1="Hello.";
+            let str2="Good to see you!";
+            document.getElementById('seeme').innerHTML = str1+" "+str2;
+                
+
+            let num1=15;
+            let num2=21;
+            document.getElementById('seeme').innerHTML += "The sum of " +num1+ " and "+num2+" is "+(num1+num2);
+            //parenthesis are needed in the above example because the + operator serves as addition AND concatenation
+            //without the parenthesis, the concatenation will happen from right to left resulting in 1521
+            //the parenthesis override the order of operations and force the addition to happen first
+   
+        </script>
+    </body>
+</html>

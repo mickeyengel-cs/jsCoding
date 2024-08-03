@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JS: The Date Class</title>
+    </head>
+    <body>
+        <div id='dates'></div>
+        <script>
+            let output=document.getElementById('dates');
+
+            //to make a new date, use the Date() function
+            //store this in a variable
+            //date information will be pulled from this variable
+            let today = new Date();
+
+            //get the month
+            let month = today.getMonth();   //months numbered 0-11
+            //get the day of the month
+            let date = today.getDate();     //dates numbered from 1-31
+            //get the year
+            let year = today.getFullYear(); //years are four digits
+            output.innerHTML += "Todays Date:" + (month+1) + "/" + date + "/" + year + "<br/>";
+
+            //TIME
+            //get the hours
+            let hours = today.getHours();   //hours are 0-23
+            //get the minutes
+            let minutes = today.getMinutes();  //minutes are 0-59
+            //get the seconds
+            let seconds = today.getSeconds();//seconds are 0-59
+            output.innerHTML += "The current time is" + hours + ":" + minutes + ":" + seconds;
+
+
+        </script>
+    </body>
+</html>
