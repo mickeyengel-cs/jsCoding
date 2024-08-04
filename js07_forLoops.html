@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JS: For Loops</title>
+    </head>
+    <body>
+        <div id='output'></div>
+        <script>
+            let output = document.getElementById('output');
+            //For loops are used to repeat a section of code a pre-determined number of times
+            //the loop below is read as: for x=1, as long as x is less then or equal to ten, increase x by 1
+            for(let x=1; x<=10; x++){
+                output.innerHTML += x + ", ";
+            }
+            output.innerHTML += "DONE!"
+
+            //The output of the above is 1, 2, 3, 4, 5, 6, 7, 8, 9, 10,DONE!
+            //On the first iteration x is 1, then it becomes 2 and so on.  When it becomes 11, the loop
+            //condition fails, the loop breaks and the rest of the code continues on.
+
+            //Note: it is allowed to write loops inside of loops, conditions inside of loops, and
+            //loops inside of conditions.
+
+            /*
+                VARIABLE UPDATES: There are a variety of update commands that can be used -
+                x = x+1, x+=1, x++ -> increases the value of x by 1
+            
+                You can also use -=, *=, /=
+            */
+        </script>
+        <hr/>
+        <!-- Below are 2 different ways to output the even numbers from 1 - 10 using a for loop -->
+        <div id='output2'></div>
+        <script>
+            let output2 = document.getElementById('output2');
+
+            //Method A
+            for(let x=2; x<=10; x+=2){
+                output2.innerHTML += x+", ";
+            }
+            output2.innerHTML += "<br/>";
+
+            //Method B
+            for(let x=1; x<=10; x++){
+                if(x%2 == 0){
+                    output2.innerHTML += x+", ";
+                }
+            }
+        </script>
+    </body>
+</html>
