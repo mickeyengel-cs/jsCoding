@@ -1,0 +1,94 @@
+<!DOCYTPE html>
+<html>
+    <head>
+        <title>JS: Basic Conditions</title>
+    </head>
+    <body>
+        <div id='output'></div>
+        <script>
+            let output = document.getElementById('output');
+
+            //A basic condition uses an if statement to check if a relation is true
+            //The relational operators include >, <, >=, <=, != and ==
+            //Be careful not to confuse '=' for assignment and '==' for comparison
+            //The relation should always be written in parenthesis and the if line doesn't get a semicolon
+            //Following the condition, use a set of { } to denote the conditional code
+
+            let age=15;
+            if(age > 10){
+                output.innerHTML += "You are older than 10 years old<br/>";
+            }
+
+            let password = "abracadabra";
+            if(password == "letmein"){
+                output.innerHTML += "You are an authorized user<br/>";
+            }
+
+            let firstInit = 'B';
+            if(firstInit != 'A'){
+                output.innerHTML += "You are not the first in the alphabet<br/>";
+            }
+
+            /*
+                The output from the examples above will be 
+                    You are older than 10 years old
+                    You are not first in the alphabet
+                These pieces of code execute because their conditions evaluate to true.
+                The password code does NOT execute because the password variable is not equal to letmein
+
+                Experiment with the code by changing the variable values and see what the output is.
+            */
+        </script>
+        
+        <div id='output2'></div>
+        <script>
+            let out = document.getElementById('output2');
+
+            //The above examples only show the conditional code when the condition is true.  But what about if
+            //it is false?  In those cases, an else statement can be used to show code only when the condition 
+            //fails.  NOTE: an else statement does NOT get its own condition, it is based off the relation
+            //associated with the if.
+
+            let gpa = 3.23;
+            if(gpa >= 3.0){
+                out.innerHTML += "Your grades are excellent!";
+            }
+            else{
+                out.innerHTML += "Your grades could improve some.";
+            }
+
+            /*
+                In an if/else statement, only ONE of the paths will execute.  Either the relation is true and the
+                if code runs OR the relation is false the else code runs.
+            */
+        </script>
+
+        <!-- CONDITIONS EXAMPLE -->
+        How many events are in the decathlon?
+        <input id='number' /><br/>
+        <button onclick='checkAnswer()'>Submit</button>
+        <div id='output3'></div>
+        
+        <script>
+            function checkAnswer(){
+                let out3 = document.getElementById('output3');
+
+                if(document.getElementById('number') == 10){
+                    out3.innerHTML = "Correct!";
+                }
+                else{
+                    out3.innerHTML = "Sorry, there are 10 events in the decathlon.";
+                }
+
+                out3.innerHTML += "<br/>Thanks for playing."
+            }
+            
+            /*
+                Note that the last line outputs regardless of the result of the relation.  This is because it is
+                outside of the conditional structure.  Once one of the conditional paths execute, the program 
+                continues and the rest of the code runs as normal.
+            */
+
+        </script>
+    </body>
+</html>

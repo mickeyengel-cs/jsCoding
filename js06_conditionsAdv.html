@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JS: Advanced Conditions</title>
+    </head>
+    <body>
+        <div id='compound'></div>
+        <script>
+            let output = document.getElementById('compound');
+
+            //Compound conditions involve more than one relation.  In a compound condition, both sides
+            //of the operator must evaluate as individual conditions.  The compound operators are
+            //AND (&&) and OR (||).  An AND statement is only true if BOTH parts are true.  An OR statement
+            //is true if 1 more more parts are true.  
+
+            let x=100;
+            let y=200;
+            if(x >= 100 && y < 300){
+                output.innerHTML = "The point is in the zone.";
+            }
+            else{
+                output.innerHTML = "You missed!";
+            }
+
+            /*
+                The above code outputs "The point is in the zone" because both parts of the condition are true.
+                If you change the value of y to 400, the output would change.  You can put as many && and || symbols
+                as desired in a condition to test a variety of values.  They will be evaluated && and then || byt the
+                order of operations, unless overridden by parenthesis.
+            */
+        </script>
+        <hr/>
+
+        <div id='nested'></div>
+        <script>
+            let nested = document.getElementById('nested');
+
+            //It is also possible to nest conditions inside of other conditions.  For example, the above compound
+            //condition can be re written as follows.  Note the need for the 2nd else statement to cover all possibilities.
+            if(x >= 100){
+                if(y < 300){
+                    nested.innerHTML = "The point is in the zone.";
+                }
+                else{
+                    nested.innerHTML = "You missed!";
+                }
+            }
+            else{
+                nested.innerHTML = "You missed!";
+            }
+
+            //One special case of nesting conditions is called an else-if chain.  Else if chains allow programmers to
+            //more easily handle mutually exclusive events (one or the other but not both)
+            let score = 76;
+            if(score >= 90){
+                nested.innerHTML += "<br/>You got an A";
+            }
+            else if(score >=80){
+                nested.innerHTML += "<br/>You got a B";
+            }
+            else if(score >= 70){
+                nested.innerHTML += "<br/>You got a C";
+            }
+            else if(score >= 60){
+                nested.innerHTML += "<br/>You got a D";
+            }
+            else{
+                nested.innerHTML += "<br/>You got an F";
+            }
+
+            /*
+                Again, only one of the above paths can execute.  It is not possible to get both an A and a C, so they are
+                mututally exclusive.  
+            */
+        </script>
+    </body>
+</html>
