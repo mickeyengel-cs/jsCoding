@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JS: For Loop Applications</title>
+    </head>
+    <body>
+        <div id='output'></div>
+        <script>
+            let output=document.getElementById('output');
+
+            //find a sum of consecutive numbers
+            let sum=0;
+            for(let x=5; x<=10; x++){
+                sum+=x;
+            }
+            output.innerHTML += "The sum of the numbers 5 to 10 is "+sum+"<hr/>";
+
+            //find the sum of random numbers
+            let sum2=0;
+            for(let x=1; x<=5; x++){
+                let rand = parseInt(Math.random()*10+1);
+                output.innerHTML += "The next number is "+rand+"<br/>";
+                sum2+=rand;
+            }
+            output.innerHTML += "The sum of the above 5 numbers is "+sum2+"<br/>";
+        </script>
+    </body>
+</html>
